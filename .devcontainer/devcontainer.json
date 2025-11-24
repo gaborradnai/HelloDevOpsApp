@@ -1,0 +1,22 @@
+{
+  "name": "HelloDevOpsApp DevContainer",
+
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  "workspaceFolder": "/workspace",
+
+  "forwardPorts": [8080],
+
+  "postCreateCommand": "dotnet restore ./HelloDevOpsApp/HelloDevOpsApp.csproj",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp"
+      ]
+    }
+  }
+}
